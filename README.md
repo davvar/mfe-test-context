@@ -1,4 +1,4 @@
-shell {
+host {
      remotes: {
         library: 'library@http://localhost:8081/remoteEntry.js',
         uns: 'uns@http://localhost:8082/remoteEntry.js',
@@ -15,7 +15,7 @@ shell {
 uns  {
     remotes: {
         library: 'library@http://localhost:8081/remoteEntry.js',
-        shell: 'shell@http://localhost:8080/remoteEntry.js',
+        host: 'host@http://localhost:8080/remoteEntry.js',
     },
     exposes: {
       './src': './src/App.tsx',

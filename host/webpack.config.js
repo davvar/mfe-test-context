@@ -41,7 +41,7 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'shell',
+      name: 'host',
       filename: 'remoteEntry.js',
       remotes: {
         library: 'library@http://localhost:8081/remoteEntry.js',

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Consumer } from 'library/components';
-import { service } from 'shell/src/exposed';
+import { service } from 'host/service';
 
 import './index.css';
 
@@ -12,7 +12,7 @@ export const App = () => (
       Context Consumer from <b>shared library</b> <Consumer />
     </h4>
     <h4 style={{ border: '1px solid black', margin: 10 }}>
-      Service from <b>shell</b> <button onClick={service.log}>click me to see alert</button>
+      Service from <b>host</b> <button onClick={service.log}>click me to see alert</button>
     </h4>
   </div>
 );

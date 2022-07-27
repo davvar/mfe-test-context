@@ -4,7 +4,7 @@
     "paths": {
       "library/components": ["./library/src/components/index.ts"],
       "uns/src": ["./uns/src/App.tsx"],
-      "shell/service": ["./shell/src/exposed/index.ts"]
+      "host/service": ["./host/src/exposed/index.ts"]
     }
   }
 }
