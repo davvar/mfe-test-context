@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "library/components": ["./library/src/components/index.ts"],
+      "uns/src": ["./uns/src/App.tsx"]
+    }
+  }
+}
