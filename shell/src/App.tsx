@@ -8,10 +8,10 @@ console.log({ Consumer });
 import "./index.css";
 
 const App = () => (
-  <Context value={() => console.log("worked")}>
+  <Context value={() => alert("context worked")}>
     <div className="container">
       <Consumer />
-      <div>Name: host</div>
+      <div>Name: shell</div>
       <div>Framework: react</div>
       <div>Language: TypeScript</div>
       <div>CSS: Empty CSS</div>

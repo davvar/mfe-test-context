@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "library/components": ["./library/src/components/index.ts"],
-      "uns/src": ["./uns/src/App.tsx"]
+      "uns/src": ["./uns/src/App.tsx"],
+      "shell/service": ["./shell/src/exposed/index.ts"]
     }
   }
 }

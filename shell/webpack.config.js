@@ -1,10 +1,10 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
-const deps = require("./package.json").dependencies;
+const deps = require('./package.json').dependencies;
 module.exports = {
   output: {
-    publicPath: 'http://localhost:8082/',
+    publicPath: 'http://localhost:8080/',
   },
 
   resolve: {
@@ -12,7 +12,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 8082,
+    port: 8080,
     historyApiFallback: true,
   },
 
@@ -41,14 +41,14 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'uns',
+      name: 'shell',
       filename: 'remoteEntry.js',
       remotes: {
         library: 'library@http://localhost:8081/remoteEntry.js',
-        shell: 'shell@http://localhost:8080/remoteEntry.js',
+        uns: 'uns@http://localhost:8082/remoteEntry.js',
       },
       exposes: {
-        './src': './src/App.tsx',
+        './service': './src/exposed/index.ts',
       },
       shared: {
         ...deps,
